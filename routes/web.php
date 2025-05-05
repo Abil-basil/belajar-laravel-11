@@ -1,12 +1,13 @@
 <?php
 
+use App\Models\User;
 use App\Models\Post;
 use illuminate\Support\Arr;
 use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', function () {
-    return view('home', ['title' => 'home']);
+    return view('home', ['title' => 'home', 'data' => User::all()]);
 });
 
 Route::get('/about', function () {
@@ -17,9 +18,9 @@ Route::get('/posts', function () {
     return view('posts', ['title' => 'blog', 'posts' => Post::all()]);
 });
 
-Route::get('/posts/{slug}', function ($slug) {
-
-    $post = Post::find($slug);
+// bingung
+// post di {} di dapat dari nama class yang akan di bandingkan
+Route::get('/posts/{post:slug}', function (Post $post) {
 
     return view('post', ['title' => 'Single Post', 'post' => $post]);
 });

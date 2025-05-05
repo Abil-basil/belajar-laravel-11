@@ -4,7 +4,7 @@
 }
 body {
     font: 16px/36px arial-narrow, arial, sans-serif; 
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 /* container */

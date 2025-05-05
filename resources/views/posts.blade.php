@@ -7,7 +7,7 @@
             <h4>{{ $post['title'] }}</h4>
         </a>
         <div>
-            <a href="#">{{ $post['author'] }} </a> | 03 july 2007
+            <a href="#">{{ $post['author'] }} </a> | {{ $post->created_at->diffForHumans() }}
         </div>
         {{-- str::limit = untuk membatasi char yang mucul --}}
         <p>{{ Str::limit($post['body'], 100) }}</p>
