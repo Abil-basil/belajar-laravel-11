@@ -21,8 +21,11 @@ Route::get('/posts', function () {
 // bingung
 // post di {} di dapat dari nama class yang akan di bandingkan
 Route::get('/posts/{post:slug}', function (Post $post) {
-
     return view('post', ['title' => 'Single Post', 'post' => $post]);
+});
+
+Route::get('/authors/{user}', function (User $user) {
+    return view('posts', ['title' => 'Articles By' . $user->name, 'posts' => $user->posts]);
 });
 
 Route::get('/contact', function () {
