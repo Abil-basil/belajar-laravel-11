@@ -5,6 +5,7 @@
     @foreach ($data as $d)
         <p>id : {{ $d['id'] }}</p>
         <p>name : {{ $d['name'] }}</p>
+        <p>username : {{ $d['username'] }}</p>
         <p>email : {{ $d['email'] }}</p>
         <p>verif email : {{ $d['email_verified_at'] }}</p>
         <p>password : {{ $d['password'] }}</p>

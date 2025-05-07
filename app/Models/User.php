@@ -47,8 +47,9 @@ class User extends Authenticatable
         ];
     }
 
+    // penghubung antar table
     public function posts(): HasMany // 1 user mempunyai banyak post
     {
-        return $this->HasMany(Post::class, 'author_id'); // 'author_id' = fk di post
+        return $this->HasMany(Post::class, 'author_id'); // 'author_id' = nama fk di post
     }
 }
