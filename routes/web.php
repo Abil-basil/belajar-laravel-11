@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PostsController;
 use App\Models\User;
 use App\Models\Post;
 use App\Models\Category;
@@ -15,9 +16,8 @@ Route::get('/about', function () {
     return view('about', ['title' => 'about']);
 });
 
-Route::get('/posts', function () {
-    return view('posts', ['title' => 'blog', 'posts' => Post::all()]);
-});
+// sedikit contoh menghubungkan ke controller
+Route::get('/posts', [PostsController::class, 'index']);
 
 // bingung
 // post di {} di dapat dari nama class yang akan di bandingkan

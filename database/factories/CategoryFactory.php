@@ -17,9 +17,10 @@ class CategoryFactory extends Factory
      */
     public function definition(): array
     {
+        $category = fake()->sentence(rand(1, 2), false);
         return [
-            'name' => fake()->sentence(rand(1, 2), false),
-            'slug' => Str::slug(fake()->sentence(rand(1, 2), false))
+            'name' => $category,
+            'slug' => Str::slug($category)
         ];
     }
 }
