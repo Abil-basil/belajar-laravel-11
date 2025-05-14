@@ -1,4 +1,5 @@
 <x-layout>
+    {{-- membuat slot dengan nama tittle yang di isi dengan $tittle dari routes --}}
     <x-slot:title>{{ $title }}</x-slot:tittle>
     <p>ini adalah halaman home</p>
 
